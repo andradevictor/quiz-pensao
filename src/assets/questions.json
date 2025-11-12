@@ -1,176 +1,186 @@
 {
-  "title": "Cálculo de Pensão",
-  "showQuestionNumbers": "off",
-  "pages": [
-    {
-      "name": "p1",
-      "elements": [
+    "title": "Cálculo de Pensão",
+    "showQuestionNumbers": "off",
+    "pages": [
         {
-          "type": "radiogroup",
-          "name": "p1_q1",
-          "title": "Você já tem pensão determinada pelo juiz?",
-          "isRequired": true,
-          "choices": ["Sim", "Não"]
-        }
-      ]
-    },
-    {
-      "name": "p2",
-      "visibleIf": "{p1_q1} = 'Sim'",
-      "elements": [
-        {
-          "type": "radiogroup",
-          "name": "p2_q1",
-          "title": "O pai está cumprindo corretamente com o pagamento da pensão?",
-          "isRequired": true,
-          "choices": [
-            "Sim, mas o valor está muito baixo",
-            "Não, ele parou de pagar ou não paga direito"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "p3",
-      "visibleIf": "{p1_q1} = 'Não'",
-      "elements": [
-        {
-          "type": "radiogroup",
-          "name": "p3_q1",
-          "title": "O pai registrou a criança?",
-          "isRequired": true,
-          "choices": ["Sim", "Não"]
-        }
-      ]
-    },
-    {
-      "name": "p4",
-      "visibleIf": "{p2_q1} = 'Não, ele parou de pagar ou não paga direito'",
-      "elements": [
-        {
-          "type": "radiogroup",
-          "name": "p4_q1",
-          "title": "O valor da pensão está baixo?",
-          "isRequired": true,
-          "choices": [
-            "Não, o valor é justo",
-            "Sim, o valor da pensão é muito baixo"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "p5",
-      "visibleIf": "{p3_q1} notempty or {p2_q1} = 'Sim, mas o valor está muito baixo' or {p4_q1} notempty",
-      "elements": [
-        {
-          "type": "radiogroup",
-          "name": "p5_q1",
-          "title": "O pai trabalha registrado?",
-          "isRequired": true,
-          "choices": [
-            "Sim, com carteira assinada",
-            "Não, trabalha autônomo",
-            "Não, está desempregado",
-            "Desconheço"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "p6",
-      "visibleIf": "{p5_q1} notempty",
-      "elements": [
-        {
-          "type": "radiogroup",
-          "name": "p6_q1",
-          "title": "Qual a renda aproximada do pai?",
-          "isRequired": true,
-          "choices": [
-            "Até R$ 2.000",
-            "De R$ 2.001 a R$ 3.000",
-            "De R$ 3.001 a R$ 4.000",
-            "De R$ 4.001 a R$ 5.000",
-            "De R$ 5.001 a R$ 10.000",
-            "Acima de R$ 10.000",
-            "Desconheço"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "p7",
-      "visibleIf": "{p6_q1} notempty",
-      "elements": [
-        {
-          "type": "radiogroup",
-          "name": "p7_q1",
-          "title": "Quantos filhos dependem dessa pensão?",
-          "isRequired": true,
-          "choices": ["1", "2", "3 ou mais"]
-        }
-      ]
-    },
-    {
-      "name": "contato",
-      "visibleIf": "{p7_q1} notempty",
-      "elements": [
-        {
-          "type": "text",
-          "name": "nome",
-          "title": "Seu nome completo",
-          "isRequired": true
+            "name": "p1",
+            "elements": [
+                {
+                    "type": "radiogroup",
+                    "name": "p1_q1",
+                    "title": "Você já tem pensão determinada pelo juiz?",
+                    "isRequired": true,
+                    "choices": [
+                        "Sim",
+                        "Não"
+                    ]
+                }
+            ]
         },
         {
-          "type": "text",
-          "name": "whatsapp",
-          "title": "WhatsApp para contato",
-          "isRequired": true
+            "name": "p2",
+            "visibleIf": "{p1_q1} = 'Sim'",
+            "elements": [
+                {
+                    "type": "radiogroup",
+                    "name": "p2_q1",
+                    "title": "O pai está cumprindo corretamente com o pagamento da pensão?",
+                    "isRequired": true,
+                    "choices": [
+                        "Sim, mas o valor está muito baixo",
+                        "Não, ele parou de pagar ou não paga direito"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "p3",
+            "visibleIf": "{p1_q1} = 'Não'",
+            "elements": [
+                {
+                    "type": "radiogroup",
+                    "name": "p3_q1",
+                    "title": "O pai registrou a criança?",
+                    "isRequired": true,
+                    "choices": [
+                        "Sim",
+                        "Não"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "p4",
+            "visibleIf": "{p2_q1} = 'Não, ele parou de pagar ou não paga direito'",
+            "elements": [
+                {
+                    "type": "radiogroup",
+                    "name": "p4_q1",
+                    "title": "O valor da pensão está baixo?",
+                    "isRequired": true,
+                    "choices": [
+                        "Não, o valor é justo",
+                        "Sim, o valor da pensão é muito baixo"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "p5",
+            "visibleIf": "{p3_q1} notempty or {p2_q1} = 'Sim, mas o valor está muito baixo' or {p4_q1} notempty",
+            "elements": [
+                {
+                    "type": "radiogroup",
+                    "name": "p5_q1",
+                    "title": "O pai trabalha registrado?",
+                    "isRequired": true,
+                    "choices": [
+                        "Sim, com carteira assinada",
+                        "Não, trabalha autônomo",
+                        "Não, está desempregado",
+                        "Desconheço"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "p6",
+            "visibleIf": "{p5_q1} notempty",
+            "elements": [
+                {
+                    "type": "radiogroup",
+                    "name": "p6_q1",
+                    "title": "Qual a renda aproximada do pai?",
+                    "isRequired": true,
+                    "choices": [
+                        "Até R$ 2.000",
+                        "De R$ 2.001 a R$ 3.000",
+                        "De R$ 3.001 a R$ 4.000",
+                        "De R$ 4.001 a R$ 5.000",
+                        "De R$ 5.001 a R$ 10.000",
+                        "Acima de R$ 10.000",
+                        "Desconheço"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "p7",
+            "visibleIf": "{p6_q1} notempty",
+            "elements": [
+                {
+                    "type": "radiogroup",
+                    "name": "p7_q1",
+                    "title": "Quantos filhos dependem dessa pensão?",
+                    "isRequired": true,
+                    "choices": [
+                        "1",
+                        "2",
+                        "3 ou mais"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "contato",
+            "visibleIf": "{p7_q1} notempty",
+            "elements": [
+                {
+                    "type": "text",
+                    "name": "nome",
+                    "title": "Seu nome completo",
+                    "isRequired": true
+                },
+                {
+                    "type": "text",
+                    "name": "whatsapp",
+                    "title": "WhatsApp para contato",
+                    "isRequired": true
+                }
+            ]
+        },
+        {
+            "name": "conclusao",
+            "visibleIf": "{nome} notempty and {whatsapp} notempty",
+            "elements": [
+                {
+                    "type": "html",
+                    "name": "resultado_final",
+                    "title": "Resultado da sua análise",
+                    "html": "<h3>Verificando suas respostas...</h3>"
+                },
+                {
+                    "type": "html",
+                    "name": "c1",
+                    "visibleIf": "{p1_q1} = 'Sim' and {p2_q1} = 'Sim, mas o valor está muito baixo'",
+                    "html": "<h3>Resultado:</h3><p><b>Ação Revisional</b></p>"
+                },
+                {
+                    "type": "html",
+                    "name": "c2",
+                    "visibleIf": "{p1_q1} = 'Sim' and {p2_q1} = 'Não, ele parou de pagar ou não paga direito' and {p4_q1} = 'Sim, o valor da pensão é muito baixo'",
+                    "html": "<h3>Resultado:</h3><p><b>Revisional + Atrasados</b></p>"
+                },
+                {
+                    "type": "html",
+                    "name": "c3",
+                    "visibleIf": "{p1_q1} = 'Sim' and {p2_q1} = 'Não, ele parou de pagar ou não paga direito' and {p4_q1} = 'Não, o valor é justo'",
+                    "html": "<h3>Resultado:</h3><p><b>Somente Atrasados</b></p>"
+                },
+                {
+                    "type": "html",
+                    "name": "c4",
+                    "visibleIf": "{p1_q1} = 'Não' and {p3_q1} = 'Sim'",
+                    "html": "<h3>Resultado:</h3><p><b>Ação de Fixação de Pensão</b></p>"
+                },
+                {
+                    "type": "html",
+                    "name": "c5",
+                    "visibleIf": "{p1_q1} = 'Não' and {p3_q1} = 'Não'",
+                    "html": "<h3>Resultado:</h3><p><b>Investigação de Paternidade + Fixação de Pensão</b></p>"
+                }
+            ]
         }
-      ]
-    },
-    {
-      "name": "conclusao",
-      "visibleIf": "{nome} notempty and {whatsapp} notempty",
-      "elements": [
-        {
-          "type": "html",
-          "name": "resultado_final",
-          "title": "Resultado da sua análise",
-          "html": "<h3>Verificando suas respostas...</h3>"
-        },
-        {
-          "type": "html",
-          "name": "c1",
-          "visibleIf": "{p1_q1} = 'Sim' and {p2_q1} = 'Sim, mas o valor está muito baixo'",
-          "html": "<h3>Resultado:</h3><p><b>Ação Revisional</b></p>"
-        },
-        {
-          "type": "html",
-          "name": "c2",
-          "visibleIf": "{p1_q1} = 'Sim' and {p2_q1} = 'Não, ele parou de pagar ou não paga direito' and {p4_q1} = 'Sim, o valor da pensão é muito baixo'",
-          "html": "<h3>Resultado:</h3><p><b>Revisional + Atrasados</b></p>"
-        },
-        {
-          "type": "html",
-          "name": "c3",
-          "visibleIf": "{p1_q1} = 'Sim' and {p2_q1} = 'Não, ele parou de pagar ou não paga direito' and {p4_q1} = 'Não, o valor é justo'",
-          "html": "<h3>Resultado:</h3><p><b>Somente Atrasados</b></p>"
-        },
-        {
-          "type": "html",
-          "name": "c4",
-          "visibleIf": "{p1_q1} = 'Não' and {p3_q1} = 'Sim'",
-          "html": "<h3>Resultado:</h3><p><b>Ação de Fixação de Pensão</b></p>"
-        },
-        {
-          "type": "html",
-          "name": "c5",
-          "visibleIf": "{p1_q1} = 'Não' and {p3_q1} = 'Não'",
-          "html": "<h3>Resultado:</h3><p><b>Investigação de Paternidade + Fixação de Pensão</b></p>"
-        }
-      ]
-    }
-  ],
-  "completedHtml": "<h3>Obrigado!</h3><p>Um especialista entrará em contato com você em breve.</p>"
+    ],
+    "completedHtml": "<h3>Obrigado!</h3><p>Um especialista entrará em contato com você em breve.</p>"
 }
