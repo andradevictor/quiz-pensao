@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,5 +9,15 @@ import { Component } from '@angular/core';
   standalone: true
 })
 export class HomeComponent {
+
+  private router = inject(Router);
+
+  public HomeComponent() {
+
+  }
+
+  iniciarCalculo(session: string): void {
+    this.router.navigateByUrl('calculo');
+  }
 
 }

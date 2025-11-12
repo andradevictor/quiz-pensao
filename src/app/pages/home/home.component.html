@@ -1,1 +1,131 @@
-<p>home works!</p>
+<main>
+    <button (click)="iniciarCalculo('CTA Fixo')" class="cta-fixed">
+        🟢 Iniciar Cálculo Gratuito
+    </button>
+
+    <header class="section hero" id="quiz-anchor">
+        <div class="content-container">
+
+            <h1 class="hero-title">⚖️ CALCULE O VALOR JUSTO DA PENSÃO DO SEU FILHO AGORA</h1>
+            <p class="hero-subtitle">MÃE, descubra quanto de pensão o pai do seu filho deveria pagar — e o que fazer se
+                ele não paga corretamente.</p>
+            <p class="hero-small-text primary-highlight">🎯 Leva menos de 2 minutos. É gratuito e 100% confidencial.</p>
+            <p class="hero-small-text">Basta responder algumas perguntas e eu vou te mostrar o valor médio que você
+                teria direito por lei — mesmo que o pai esteja desempregado ou sem trabalho formal.</p>
+
+            <div class="hero-cta-area">
+
+                <button (click)="iniciarCalculo('Hero Principal')" class="cta-button primary large">🟢 Começar
+                    agora</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="section reason">
+        <div class="content-container section-layout">
+            <div class="text-content">
+                <h2 class="section-title">💡 A maioria das mães no Brasil não recebe o valor correto da pensão.</h2>
+                <p>Algumas aceitam acordos informais injustos. Outras nem sabem que podem pedir revisão para aumentar o
+                    valor da pensão.</p>
+
+                <h3>Com esse cálculo rápido, você vai descobrir:</h3>
+                <ul>
+                    <li>✅ O valor aproximado que seu filho tem direito por mês</li>
+                    <li>✅ Se é possível pedir revisão (aumento) da pensão</li>
+                    <li>✅ E o que fazer se ele parou de pagar ou nunca ajudou</li>
+                </ul>
+                <p class="highlight-text">💡 Em menos de 2 minutos, você entende o que muita gente leva anos para
+                    descobrir.</p>
+                <button (click)="iniciarCalculo('Seção Por Que')" class="cta-button secondary">🟢 Fazer o cálculo
+                    agora</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section result accent-section">
+        <div class="content-container section-layout reverse">
+
+            <div class="text-content">
+                <h2 class="section-title">📊 Você vai receber uma estimativa completa e personalizada.</h2>
+
+                <h3>Depois de responder às perguntas, você vai saber:</h3>
+                <ul>
+                    <li>💰 O valor médio que o pai deveria pagar</li>
+                    <li>🧾 O tipo de ação mais indicado (fixação, revisão, cobrança ou investigação)</li>
+                    <li>⏰ O que fazer imediatamente para não perder tempo e dinheiro</li>
+                </ul>
+                <p class="highlight-text">📍 E no final, você ainda vai poder ter acesso a um material completo e
+                    exclusivo com o passo a passo para garantir seus direitos.</p>
+                <button (click)="iniciarCalculo('Seção Resultados')" class="cta-button primary">🟢 Fazer o cálculo
+                    agora</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section paternity">
+        <div class="content-container section-layout">
+            <div class="text-content">
+                <h2 class="section-title">🧬 Mesmo sem o nome do pai na certidão, a lei está do seu lado.</h2>
+                <p>Mesmo que o pai nunca tenha reconhecido o filho oficialmente, você pode pedir a investigação de
+                    paternidade junto com a pensão.</p>
+                <p>E o melhor: o exame de DNA é gratuito em muitos casos.</p>
+                <p class="highlight-text">👉 Por isso é tão importante começar o cálculo — ele vai te mostrar o caminho
+                    certo para o seu caso.</p>
+                <button (click)="iniciarCalculo('Seção Paternidade')" class="cta-button secondary">🟢 Fazer o cálculo
+                    gratuito agora</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section testimonials accent-section">
+        <div class="content-container">
+            <h2 class="section-title">🟫 Veja o que dizem sobre a Barbosa&Cruz</h2>
+
+            <div class="review-header">
+                <h3>Barbosa & Cruz Advogados</h3>
+                <div class="rating">
+                    <span class="stars">4,9 ⭐⭐⭐⭐⭐</span>
+                    <span>105 avaliações no Google</span>
+                </div>
+            </div>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>“Estou muito satisfeita com o desempenho do trabalho de vocês e minha filha agradece obrigado por
+                        ter ajudado...”</p>
+                    <small>Maria Cristiane</small>
+                </div>
+                <div class="testimonial-card">
+                    <p>“Parabéns pelo trabalho sério e acolhedor que vocês realizam! Em um campo tão sensível como o
+                        Direito de Família, é admirável...”</p>
+                    <small>Ana Carla Palmeira</small>
+                </div>
+                <div class="testimonial-card">
+                    <p>“O escritório foi extremamente atencioso com o meu caso e muito competente na resolução do mesmo,
+                        tiram todas as dúvidas e fazem sugestões quando nao entendemos algo, super indico.”</p>
+                    <small>Ana Paula Pereira</small>
+                </div>
+            </div>
+            <p class="highlight-text center-text">💬 **Mais de 100 avaliações 5 estrelas no Google.**</p>
+
+            <div class="emotional-close">
+
+                <p class="emotional-text">💬 Você já faz o impossível pelos seus filhos. Agora é hora de garantir o que
+                    é de direito deles.</p>
+                <p class="highlight-text center-text">⏰ Leva menos de 2 minutos.</p>
+                <p class="final-cta-text">Descubra agora quanto de pensão o pai deveria estar pagando 👇</p>
+                <button (click)="iniciarCalculo('Fechamento Final')" class="cta-button primary large final-shadow">🟢
+                    Iniciar o cálculo gratuito</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="content-container">
+        <p class="security-seal">🔒 Seus dados são confidenciais. As informações não serão compartilhadas.</p>
+        <p>&copy; 2025 Barbosa & Cruz Advogados. Todos os direitos reservados.</p>
+    </div>
+</footer>

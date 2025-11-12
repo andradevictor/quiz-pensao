@@ -1,0 +1,344 @@
+/* --- 0. RESET & BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definição de Paleta de Cores (Minimalista e Elegante) */
+:root {
+    --color-primary: #1e8449;
+    /* Verde (Ação Principal - Mais escuro e profissional) */
+    --color-secondary: #0077c2;
+    /* Azul (Ação Secundária) */
+    --color-highlight: #ffc107;
+    /* Amarelo (Destaque Contador) */
+    --color-text: #1a1a1a;
+    --color-background-white: #ffffff;
+    --color-background-light: #f7f7f7;
+    /* Cinza muito claro */
+    --color-accent-section: #f0fff0;
+    /* Verde/Cinza sutil para destacar seções */
+}
+
+:host {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background-light);
+}
+
+.content-container {
+    max-width: 1100px;
+    /* Levemente menor para um visual mais contido */
+    margin: 0 auto;
+    padding: 25px 20px;
+}
+
+.section {
+    padding: 80px 0;
+    /* Mais espaçamento para elegância */
+    background-color: var(--color-background-white);
+}
+
+.accent-section {
+    background-color: var(--color-accent-section);
+}
+
+
+/* --- 1. BOTÕES (CTAs) DE ALTO IMPACTO --- */
+
+.cta-button {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 18px 30px;
+    /* Mais padding */
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 50px;
+    /* Botão arredondado para um toque moderno */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Botão Primário (Foco principal) */
+.cta-button.primary {
+    background-color: var(--color-primary);
+    color: rgb(86, 83, 83);
+    /* Box-shadow mais forte para "saltar" da tela */
+    box-shadow: 0 8px 15px rgba(30, 132, 73, 0.5);
+}
+
+.cta-button.primary:hover {
+    background-color: darken(#1e8449, 10%);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(30, 132, 73, 0.7);
+}
+
+.cta-button.secondary {
+    background-color: var(--color-secondary);
+    color: rgb(86, 83, 83);
+    border-radius: 8px;
+    font-size: 1.1rem;
+    padding: 15px 30px;
+}
+
+.cta-button.secondary:hover {
+    background-color: #0056b3;
+}
+
+.cta-button.large {
+    max-width: 500px;
+    padding: 22px 40px;
+    font-size: 1.4rem;
+}
+
+.final-shadow {
+    box-shadow: 0 10px 20px rgba(30, 132, 73, 0.8) !important;
+}
+
+/* Botão fixo */
+.cta-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 18px 10px;
+    background-color: var(--color-highlight);
+    color: var(--color-text);
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    display: none;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+    border: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+/* Texto de Destaque */
+.highlight-text {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin: 25px 0;
+    line-height: 1.4;
+}
+
+.primary-highlight {
+    color: var(--color-secondary);
+    font-weight: 700;
+}
+
+.center-text {
+    text-align: center;
+}
+
+/* --- 2. TIPOGRAFIA E ESTRUTURA --- */
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.hero-title {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--color-text);
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+ul li {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* --- 3. HERO E SEÇÕES (Minimalista) --- */
+
+.hero {
+    background-color: var(--color-background-soft);
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.quiz-timer {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: var(--color-highlight);
+    color: var(--color-text);
+    border-radius: 50px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.section-layout {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    text-align: left;
+}
+
+.section-layout.reverse {
+    flex-direction: row-reverse;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.hero-cta-area img,
+.section-image {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 8px;
+    /* Borda levemente arredondada */
+    margin: 30px auto;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    /* Sombra sutil */
+}
+
+
+/* --- 4. PROVA SOCIAL (TESTEMUNHOS) --- */
+.review-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.rating .stars {
+    font-size: 1.6rem;
+    color: var(--color-highlight);
+    margin-right: 10px;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.testimonial-card {
+    background-color: var(--color-background-white);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.emotional-close {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #ddd;
+}
+
+.emotional-text {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 25px;
+}
+
+.final-cta-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+
+/* --- 5. RODAPÉ --- */
+footer {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 25px 0 55px 0;
+    font-size: 0.85rem;
+}
+
+.security-seal {
+    font-weight: 700;
+    color: var(--color-highlight);
+    margin-bottom: 15px;
+}
+
+
+/* --- 6. RESPONSIVIDADE (Mobile First) --- */
+@media (max-width: 900px) {
+
+    .section-layout,
+    .section-layout.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-image {
+        max-width: 80%;
+        margin: 20px auto;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .cta-button {
+        max-width: 90%;
+    }
+
+    .cta-fixed {
+        display: block;
+        /* Mostrar botão fixo em mobile */
+    }
+
+    footer {
+        padding-bottom: 80px;
+        /* Mais espaço para o botão fixo */
+    }
+}
