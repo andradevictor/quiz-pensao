@@ -1,0 +1,6 @@
+{
+  "routes": {
+    "/quiz-pensao": {},
+    "/quiz-pensao/calculo": {}
+  }
+}
